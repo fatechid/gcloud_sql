@@ -18,7 +18,7 @@ config = {
 
 # now we establish our connection
 cnxn = mysql.connector.connect(**config)
-cursor = cnxn.cursor()  # initialize connection cursor
+cursor = cnxn.cursor()  #initialize connection cursor
 
 if cursor:
 	print("SQL Connected")
@@ -29,17 +29,17 @@ else:
 create_db = input("Wanna create database? (Y/n) : ")
 if create_db == "y" or "Y":
 	try:
-		database_input = input("Enter your database name: ")
-		cursor.execute("CREATE DATABASE " + database_input)  # create a new database
-		cnxn.close()  # close connection
+		database_input = input("Enter your database name: ") #database name must without space or special char, create with your own code or can handle with Exception :)
+		cursor.execute("CREATE DATABASE " + database_input) #create a new database
+		cnxn.close()  #close connection
 		print("Database created successfully")
 		print()
 		print("Connection closed.")
 	except mysql.connector.Error as err:
 		print("DatabaseError",  err.msg)
 		print()
-		print("Connection closed.") # close connection
+		print("Connection closed.") #close connection
 
 else:
 	cnxn.close()  # close connection
-	print("Connection closed.")	
+	print("Connection closed.")
