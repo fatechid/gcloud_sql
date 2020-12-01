@@ -11,7 +11,7 @@ config = {
     'password': DB_password,
     'host': DB_server,
     'client_flags': [ClientFlag.SSL],
-    'ssl_ca': /server-ca.pem',
+    'ssl_ca': '/server-ca.pem',
     'ssl_cert': '/client-cert.pem',
     'ssl_key': '/client-key.pem'
 }
@@ -27,7 +27,7 @@ else:
 	print("Something wrong and I can feel it.")
 
 create_db = input("Wanna create database? (Y/n) : ")
-if create_db == "y" or "Y":
+if (create_db == "y") or (create_db == "Y"):
 	try:
 		database_input = input("Enter your database name: ") #database name must without space or special char, create with your own code or can handle with Exception :)
 		cursor.execute("CREATE DATABASE " + database_input) #create a new database
@@ -39,7 +39,12 @@ if create_db == "y" or "Y":
 		print("DatabaseError",  err.msg)
 		print()
 		print("Connection closed.") #close connection
-
+elif create_db == "n":
+	cnxn.close()  # close connection
+	print("Goodbye")
+	print()
+	print("Connection closed.")
 else:
 	cnxn.close()  # close connection
+	print("Input with Y/n")
 	print("Connection closed.")
