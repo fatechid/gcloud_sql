@@ -3,7 +3,7 @@
 This is a pretty big security issue<br />
 That's why we use SSL encryption to restrict access to our instance.<br />
 
-edit this line with your instance<br />
+edit this line with your instance information<br />
 
 **DB_server = "your_host"**<br />
 **DB_username = "your_username"**<br />
