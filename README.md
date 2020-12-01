@@ -1,4 +1,4 @@
-# Simple Gcloud SQL Connection with Python<br />
+# Simple Google Cloud SQL Connection with Python<br />
 
 This is a pretty big security issue<br />
 That's why we use SSL encryption to restrict access to our instance.<br />
