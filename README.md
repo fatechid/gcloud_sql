@@ -9,6 +9,5 @@ edit this line with your instance information<br />
 **DB_username = "your_username"**<br />
 **DB_password = "your_password"**<br />
 
-also we can create database when connection is successfully.<br />
-**database_input = input("Enter your database name: ") #database name**<br />
+also we can create database for testing when connection is successfully.<br />
 **cursor.execute("CREATE DATABASE " + database_input)  #create a new database**<br />
