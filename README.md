@@ -1,4 +1,8 @@
 # Simple Google Cloud SQL Connection with Python<br />
+
+First you need to install mysql library in your python<br />
+**$   pip install mysql-connector-python**
+
 generate client certificate at **SQL -> Connection -> Create a client Cerfiticate**<br />
 And edit this line for your client certificate dir<br />
     **'ssl_ca': '/server-ca.pem',<br />
